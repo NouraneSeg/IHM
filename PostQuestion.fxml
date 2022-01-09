@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="984.0">
+         <children>
+            <Button layoutX="865.0" layoutY="6.0" mnemonicParsing="false" onAction="#GoToMyAccount" prefHeight="31.0" prefWidth="107.0" text="My Account">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@../../../Desktop/icons/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="5.0" layoutY="-4.0" mnemonicParsing="false" onAction="#GoToHomeUser" prefHeight="41.0" prefWidth="94.0" text="Home">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="105.0" layoutY="-4.0" mnemonicParsing="false" onAction="#GoToCategoriesUser" prefHeight="41.0" prefWidth="113.0" text="Categories">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="225.0" layoutY="-4.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#GoToAboutUsUser" prefHeight="41.0" prefWidth="102.0" text="About Us">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField layoutX="345.0" layoutY="6.0" prefHeight="31.0" prefWidth="398.0" promptText="Enter a keyword or a question ..." />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="412.0" />
+            <Button layoutX="749.0" layoutY="8.0" mnemonicParsing="false" onAction="#GoToSearchResultUser" prefHeight="28.0" prefWidth="76.0" text="Search">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@application/magnifying-glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="43.0" layoutY="83.0" prefHeight="473.0" prefWidth="899.0" style="-fx-border-color: grey;">
+               <children>
+                  <Label layoutX="48.0" layoutY="49.0" text="Title*">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="questiontitle" layoutX="169.0" layoutY="45.0" prefHeight="32.0" prefWidth="636.0" promptText="Ask your Question here">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="48.0" layoutY="102.0" text="Category">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="questioncountry" layoutX="169.0" layoutY="104.0" prefWidth="150.0" promptText="Country" />
+                  <ComboBox fx:id="questiondegree" layoutX="337.0" layoutY="104.0" prefWidth="150.0" promptText="Degree" />
+                  <ComboBox fx:id="questionsubject" layoutX="506.0" layoutY="104.0" prefWidth="150.0" promptText="Subject" />
+                  <Label layoutX="48.0" layoutY="167.0" text="Details">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="questiondetails" layoutX="168.0" layoutY="167.0" prefHeight="200.0" prefWidth="636.0" promptText="Tell us more...">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Button layoutX="758.0" layoutY="386.0" mnemonicParsing="false" onAction="#PostQuestion" text="Post">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="emptyquestion" layoutX="378.0" layoutY="391.0" text="You can't post an empty question !" textFill="#fb1d1d" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="52.0" layoutY="65.0" prefHeight="35.0" prefWidth="177.0" style="-fx-background-color: f8f4f4;" text="Post a new Question" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
